@@ -1,0 +1,310 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*Definimpos tipo. color e imnterlineado de las letras*/
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+/* Header */
+.header {
+    /*Atrinutos para el encabezado*/
+    background-color: #2c3e50; /*color de fondo*/
+    color: white;       /*text color blaco*/
+    padding: 1rem 0;            
+    position: fixed;      /*Ocuparlo en la parte superior*/
+    width: 100%;
+    top: 0;
+    z-index: 1000;          /*Debe estar por enciama de otros emementos*/
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.logo-img {
+    height: 40px; /* Ajusta según SE ESPECIFIQUE */
+    width: auto; /* Mantiene la proporción */
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+}
+
+.navigation li {
+    margin-left: 1.5rem;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: #3498db;
+}
+
+
+/* Banner */
+.banner {
+    height: 100vh;
+    background-image: url("https://www.capgemini.com/es-es/wp-content/uploads/sites/16/2023/02/Thumbnail-TECHFUTURE.jpg");
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 60px; 
+}
+
+.banner-content {
+    width: 100%;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Botón */
+.btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Sección Proyectos  */
+.projects {
+    padding: 4rem 0;
+    overflow-x: auto; /* Permite scroll horizontal si no caben todos */
+}
+
+.projects h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+.projects-grid {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0;
+    flex-wrap: nowrap; /* Para que no se rompa en varias líneas */
+}
+
+.project-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    min-width: 300px;
+    max-width: 300px; /* Ancho fijo para todas las tarjetas */
+    display: flex;
+    flex-direction: column;
+    height: 450px; /* Altura fija para consistencia */
+    flex-shrink: 0; /* Evita que se reduzcan */
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-image {
+    height: 200px;
+    overflow: hidden;
+    flex-shrink: 0; /* Evita que la imagen cambie de tamaño */
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-card-content {
+    padding: 1rem;
+    flex: 1; /* Ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card h3 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.project-card p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    flex: 1; /* Ocupa el espacio disponible */
+}
+
+/* Sección Misión */
+.mission {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+}
+
+.mission h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+.mission-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mission p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Sección Únete */
+.join {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+}
+
+.join h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+.join-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.submit-btn {
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+    }
+    
+    .navigation {
+        margin-top: 1rem;
+    }
+    
+    .navigation li {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .banner h1 {
+        font-size: 2rem;
+    }
+    
+    .banner p {
+        font-size: 1.2rem;
+    }
+    
+    .project-card {
+        min-width: 250px;
+        max-width: 250px;
+        height: 400px;
+    }
+    
+    .project-card p {
+        -webkit-line-clamp: 4;
+    }
+}
